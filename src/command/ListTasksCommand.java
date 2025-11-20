@@ -4,6 +4,7 @@ import domain.Task;
 import persistence.TaskRepository;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * Comando concreto del patrón Command.
@@ -11,9 +12,11 @@ import java.util.List;
  */
 public class ListTasksCommand implements Command {
     private final TaskRepository repository;
+    private final Scanner reader;
 
-    public ListTasksCommand(TaskRepository repository) {
+    public ListTasksCommand(TaskRepository repository, Scanner reader) {
         this.repository = repository;
+        this.reader = reader;
     }
 
     /*
@@ -33,5 +36,9 @@ public class ListTasksCommand implements Command {
             Task task = tasks.get(i);
             System.out.println(i + 1 + ". " + task);
         }
+
+        System.out.println();
+        System.out.print("Presione Enter para volver al menú: ");
+        reader.nextLine();
     }
 }

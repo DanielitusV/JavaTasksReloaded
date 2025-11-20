@@ -20,7 +20,7 @@ public class Main {
        TaskRepository repository = new InMemoryTaskRepository();
 
        Command addCommand = new AddTaskCommand(repository, reader);
-       Command listCommand = new ListTasksCommand(repository);
+       Command listCommand = new ListTasksCommand(repository, reader);
        Command completeCommand = new CompleteTaskCommand(repository, reader);
        Command deleteCommand = new DeleteTaskCommand(repository, reader);
 
