@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Comando concreto del patrón Command.
  * Se encarga de mostrar todas las tareas almacenadas en el repositorio.
  */
-public class ListTasksCommand implements Command {
+public class ListTasksCommand implements TaskCommand {
     private final TaskRepository repository;
     private final Scanner reader;
 

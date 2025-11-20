@@ -6,7 +6,7 @@ import persistence.TaskRepository;
 import java.util.List;
 import java.util.Scanner;
 
-public class AddTaskCommand implements Command {
+public class AddTaskCommand implements TaskCommand {
     private final TaskRepository repository;
     private final Scanner reader;
 

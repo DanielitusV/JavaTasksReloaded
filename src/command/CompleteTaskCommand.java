@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Comando concreto del patrón Command.
  * Se encarga de marcar una tarea como completada usando los datos guardados en memoria.
  */
-public class CompleteTaskCommand implements Command {
+public class CompleteTaskCommand implements TaskCommand {
     private final TaskRepository repository;
     private final Scanner reader;
 

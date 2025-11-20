@@ -4,7 +4,7 @@ package command;
  * Interfaz base para el patrón Command.
  * Representa cada acción ejecutable dentro de la aplicación.
  */
-public interface Command {
+public interface TaskCommand {
     /*
      * Ejecuta la acción asociada al comando.
      */

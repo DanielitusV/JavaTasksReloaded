@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Comando concreto del patrón Command.
  * Se encarga de eliminar una tarea seleccionada por el usuario.
  */
-public class DeleteTaskCommand implements Command {
+public class DeleteTaskCommand implements TaskCommand {
     private final TaskRepository repository;
     private final Scanner reader;
 
