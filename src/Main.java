@@ -1,8 +1,4 @@
-import command.AddTaskCommand;
-import command.Command;
-import command.CompleteTaskCommand;
-import command.DeleteTaskCommand;
-import command.ListTasksCommand;
+import command.*;
 
 import persistence.InMemoryTaskRepository;
 import persistence.TaskRepository;
@@ -19,13 +15,12 @@ public class Main {
        Scanner reader = new Scanner(System.in);
        TaskRepository repository = new InMemoryTaskRepository();
 
-       Command addCommand = new AddTaskCommand(repository, reader);
-       Command listCommand = new ListTasksCommand(repository, reader);
-       Command completeCommand = new CompleteTaskCommand(repository, reader);
-       Command deleteCommand = new DeleteTaskCommand(repository, reader);
+       TaskCommand addCommand = new AddTaskCommand(repository, reader);
+       TaskCommand listCommand = new ListTasksCommand(repository, reader);
+       TaskCommand completeCommand = new CompleteTaskCommand(repository, reader);
+       TaskCommand deleteCommand = new DeleteTaskCommand(repository, reader);
 
        boolean running = true;
-
        System.out.println("JavaTasksReloaded - Gestor simple de tareas");
 
        while (running) {
@@ -61,7 +56,6 @@ public class Main {
                    System.out.println("Opción inválida.");
            }
        }
-
        reader.close();
    }
 }

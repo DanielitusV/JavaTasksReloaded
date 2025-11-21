@@ -6,7 +6,7 @@ import java.util.List;
 
 /*
  * Implementación de TaskRepository en memoria.
- * No usar archivos ni bae de datos, solo mantiene las tareas en una lista.
+ * No usa archivos ni base de datos, solo mantiene las tareas en una lista.
  */
 public class InMemoryTaskRepository implements TaskRepository {
     private final List<Task> tasks = new ArrayList<>();
